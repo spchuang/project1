@@ -1,0 +1,112 @@
+body{
+	margin: 0;
+	padding: 0;
+	color: #ebb35a;
+	background-color: #000000;
+	overflow: hidden;
+	font-size: 12px;
+	font-family: Tahoma,Geneva,Kalimati,sans-serif;
+}
+#video_wrapper{
+	width: 825px;
+	height: 390px;
+	position: absolute;
+	top: 100px;
+	left: 255px;
+	border-top: 3px solid #006699;
+}
+#youtube_player{
+	width: 825px;
+	height: 300px;
+	margin: 0 auto;
+	background-color: white;
+	overflow: hidden;
+}
+.bottoms{
+	position: relative;
+	float: left;
+	margin: 0 3px;
+}
+.bottoms:hover{
+	cursor:pointer;
+}
+.bottoms img{
+	width: 50px;
+	height:50px;
+}
+#video_slider { 
+	margin: 15px 20px;
+	width: 380px;
+}
+#volume{
+	margin: 20px 0px;
+	width: 100px;
+	height: 5px;		
+}
+#suggest_video{
+	clear: both;
+	position: absolute;
+	left: 10px;
+	bottom: 20px;
+	height: 20px;
+	width: 670px;
+	border: 1px solid #655042;
+}
+
+#users_wrap{
+	width: 250px;
+	height: 674px;
+	position: absolute;
+	left: 0px;
+	border: 3px solid #006699;
+}
+#user_wrap{
+	position: absolute;
+	left: 20px;
+}
+#chat_wrap{	
+	width: 825px;
+	height: 170px;
+	position: absolute;
+	left: 255px;
+	bottom: 0px;
+	border-top: 3px solid #006699;
+	border-bottom: 3px solid #006699;
+}
+#chat{
+	width: 805px;
+	padding: 5px 10px;
+	height: 100px;
+   	overflow-y: scroll;
+   	overflow-x: hidden; 
+}
+#chat li{
+	background-color: inherit;
+}
+#chat li:nth-child(odd){
+	background-color: #1d1d1a;
+}
+#chat li:nth-child(even){
+
+}
+#message{
+	height: 33px;
+	width: 825px;
+	bottom: 0px;
+	position: absolute;
+}
+#data{
+	margin: 0px;
+	height: 33px;
+	width: 825px;
+	border: 1px solid #655042;
+	opacity:0.3;
+}
+
+#playlist_wrap{
+	width: 280px;
+	height: 674px;
+	position: absolute;
+	right: 0px;
+	border: 3px solid #006699;
+}

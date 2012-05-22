@@ -1,0 +1,48 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" 		type="text/css"/>	
+<script src="http://staging.tokbox.com/v0.91/js/TB.min.js"></script>
+<script src="/include/client.js"></script>
+<script src="/include/youtube.js"></script>
+<link rel="stylesheet" type="text/css" href="/include/style.css" />
+
+</head>
+
+<body>
+	<div id="video_wrapper">
+    	<div id="youtube_player"></div>
+		<div id = "youtube_control">
+				<div class="bottoms" id="start"><img src="/include/play.png"/></div>
+				<div class="bottoms" id="pause"><img src="/include/pause.png"/></div>
+				<div class="bottoms" id="stop"><img src="/include/stop.png"/></div>
+				<div class="bottoms" id="mute"><img src="/include/mute.png"/></div>
+				<div class="bottoms" id="unmute"><img src="/include/unmute.png"/></div>
+				<div class="bottoms" id="video_slider"></div>
+				<div class="bottoms" id="volume"></div>
+		</div>
+		<input id="suggest_video" placeholder="Input Youtube Link: http://www.youtube.com/watch?v=YMQ2Uo4aAnk"/>
+	</div>
+	
+	<div id="users_wrap">TokBox
+		<div id = "user_wrap">
+			<div id="user"></div>
+		</div>
+	</div>
+
+	<div id="chat_wrap">CHAT
+		<ul id="chat"></ul>
+		<div id="message">
+			<input id="data" />
+		</div>
+	</div>
+
+	<div id="playlist_wrap">Users
+		<div id="rooms"></div>
+			<div id="users"></div>
+	</div>
+</body>
+</html>

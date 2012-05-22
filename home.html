@@ -1,0 +1,71 @@
+<html>
+<head>
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script>
+var url="http://localhost:3000";
+var socket= io.connect(url);
+
+socket.on('connect', function(){
+	alert("Welcome");
+});
+
+socket.on('go_to_room',function(room){
+	//alert("redirect you to "+room);
+    window.location = "room/" + room;
+});
+
+socket.on('room_already_exists',function(newRoom){
+    alert("Room " + newRoom + " already exists");
+});
+
+$(document).ready(function(){
+    //when client clicks send
+    $("#create").click(function(){
+		var room_name = prompt("Room name");
+		//error when cancel		
+		while(!checkName(room_name)){
+			room_name = prompt("Incorrect format please only use numbers and letters");		
+		}
+    	$("#new_room").val("");
+    	socket.emit('create_room',room_name);
+ 	});
+});
+
+//check for valid syntax in room name
+function checkName(name){
+	var patt = /^[a-zA-Z0-9_-]+$/;
+	if(name == null || name.match(patt) == null || name.length == 0){
+		return false;	
+	}				 
+	return true;
+}
+</script>
+<style>
+body{
+	marginn: 0;
+	padding: 0;
+	background-color: black;
+	color: white;
+	overflow: hidden;
+	font-size: 12px;
+	font-family: Tahoma,Geneva,Kalimati,sans-serif;
+}
+#main_wrap{
+	width:300px;
+	height: 80px;
+	margin: 250px auto 0 auto;
+	border: 1px solid grey;
+	text-align:center;
+}
+</style>
+</head>
+
+<body>
+<div id="main_wrap">
+	<h3>Want to watch videos together?</h3>	
+	<input type="button" id="create" value="NEW ROOM"/>
+</div>
+</body>
+
+</html>
